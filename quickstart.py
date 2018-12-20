@@ -14,7 +14,9 @@ insta_password = ''
 # set headless_browser=True to run InstaPy in the background
 session = InstaPy(username=os.environ.get('INSTA_UN'),
                   password=os.environ.get('INSTA_PW'),
-                  headless_browser=False)
+                  headless_browser=True,
+                  multi_logs=True,
+                  nogui=True)
 
 
 with smart_run(session):
