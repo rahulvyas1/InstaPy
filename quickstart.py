@@ -1,5 +1,6 @@
 """ Quickstart script for InstaPy usage """
 # imports
+import os
 from instapy import InstaPy
 from instapy.util import smart_run
 
@@ -11,8 +12,8 @@ insta_password = ''
 
 # get an InstaPy session!
 # set headless_browser=True to run InstaPy in the background
-session = InstaPy(username=insta_username,
-                  password=insta_password,
+session = InstaPy(username=os.environ.get('INSTA_UN'),
+                  password=os.environ.get('INSTA_PW'),
                   headless_browser=False)
 
 
