@@ -25,12 +25,15 @@ with smart_run(session):
                                         min_followers=45,
                                         min_following=77)
     
-    session.set_dont_include(["friend1", "friend2", "friend3"])
     session.set_dont_like(["pizza", "#store"])
     
-    
+
     # activity
-    session.like_by_tags(["natgeo"], amount=10)
+    session.like_by_tags(["coinbase"], amount=10)
+
+    session.follow_commenters(['cointelegraph', 'thetrendytechie', 'terrabitcoin'], amount=100, daysold=365, max_pic = 100, sleep_delay=600, interact=False)
+
+
 
 
 
